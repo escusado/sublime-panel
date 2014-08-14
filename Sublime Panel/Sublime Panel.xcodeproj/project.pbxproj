@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6A5F41A199C559E004EB2E6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A5F419199C559E004EB2E6 /* Cocoa.framework */; };
+		F6A5F424199C559E004EB2E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F422199C559E004EB2E6 /* InfoPlist.strings */; };
+		F6A5F426199C559E004EB2E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F425199C559E004EB2E6 /* main.m */; };
+		F6A5F42A199C559E004EB2E6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F428199C559E004EB2E6 /* Credits.rtf */; };
+		F6A5F42D199C559E004EB2E6 /* SublimePanelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F42C199C559E004EB2E6 /* SublimePanelAppDelegate.m */; };
+		F6A5F430199C559E004EB2E6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F42E199C559E004EB2E6 /* MainMenu.xib */; };
+		F6A5F432199C559E004EB2E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F431199C559E004EB2E6 /* Images.xcassets */; };
+		F6A5F439199C559E004EB2E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A5F438199C559E004EB2E6 /* XCTest.framework */; };
+		F6A5F43A199C559E004EB2E6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A5F419199C559E004EB2E6 /* Cocoa.framework */; };
+		F6A5F442199C559E004EB2E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F440199C559E004EB2E6 /* InfoPlist.strings */; };
+		F6A5F444199C559E004EB2E6 /* Sublime_PanelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F443199C559E004EB2E6 /* Sublime_PanelTests.m */; };
+		F6A5F44E199C55EB004EB2E6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A5F44D199C55EB004EB2E6 /* WebKit.framework */; };
+		F6A5F452199C5690004EB2E6 /* JsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F451199C5690004EB2E6 /* JsApi.m */; };
+		F6A5F459199C56EE004EB2E6 /* WebViewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F455199C56EE004EB2E6 /* WebViewWindowController.m */; };
+		F6A5F45A199C56EE004EB2E6 /* WebViewWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F456199C56EE004EB2E6 /* WebViewWindowController.xib */; };
+		F6A5F45B199C56EE004EB2E6 /* WebViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F458199C56EE004EB2E6 /* WebViewWindow.m */; };
+		F6A5F45E199C574F004EB2E6 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F45D199C574F004EB2E6 /* AppController.m */; };
+		F6A5F460199C5786004EB2E6 /* web-app in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F45F199C5786004EB2E6 /* web-app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6A5F43B199C559E004EB2E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6A5F40E199C559E004EB2E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6A5F415199C559E004EB2E6;
+			remoteInfo = "Sublime Panel";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6A5F416199C559E004EB2E6 /* Sublime Panel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sublime Panel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A5F419199C559E004EB2E6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F6A5F41C199C559E004EB2E6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F6A5F41D199C559E004EB2E6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F6A5F41E199C559E004EB2E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F6A5F421199C559E004EB2E6 /* Sublime Panel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sublime Panel-Info.plist"; sourceTree = "<group>"; };
+		F6A5F423199C559E004EB2E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6A5F425199C559E004EB2E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6A5F427199C559E004EB2E6 /* Sublime Panel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sublime Panel-Prefix.pch"; sourceTree = "<group>"; };
+		F6A5F429199C559E004EB2E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F6A5F42B199C559E004EB2E6 /* SublimePanelAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SublimePanelAppDelegate.h; sourceTree = "<group>"; };
+		F6A5F42C199C559E004EB2E6 /* SublimePanelAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SublimePanelAppDelegate.m; sourceTree = "<group>"; };
+		F6A5F42F199C559E004EB2E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F6A5F431199C559E004EB2E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F6A5F437199C559E004EB2E6 /* Sublime PanelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sublime PanelTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A5F438199C559E004EB2E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F6A5F43F199C559E004EB2E6 /* Sublime PanelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sublime PanelTests-Info.plist"; sourceTree = "<group>"; };
+		F6A5F441199C559E004EB2E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6A5F443199C559E004EB2E6 /* Sublime_PanelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sublime_PanelTests.m; sourceTree = "<group>"; };
+		F6A5F44D199C55EB004EB2E6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F6A5F450199C5690004EB2E6 /* JsApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsApi.h; sourceTree = "<group>"; };
+		F6A5F451199C5690004EB2E6 /* JsApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsApi.m; sourceTree = "<group>"; };
+		F6A5F454199C56EE004EB2E6 /* WebViewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewWindowController.h; sourceTree = "<group>"; };
+		F6A5F455199C56EE004EB2E6 /* WebViewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewWindowController.m; sourceTree = "<group>"; };
+		F6A5F456199C56EE004EB2E6 /* WebViewWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewWindowController.xib; sourceTree = "<group>"; };
+		F6A5F457199C56EE004EB2E6 /* WebViewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewWindow.h; sourceTree = "<group>"; };
+		F6A5F458199C56EE004EB2E6 /* WebViewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewWindow.m; sourceTree = "<group>"; };
+		F6A5F45C199C574F004EB2E6 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		F6A5F45D199C574F004EB2E6 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		F6A5F45F199C5786004EB2E6 /* web-app */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "web-app"; path = "../../web-app"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6A5F413199C559E004EB2E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A5F44E199C55EB004EB2E6 /* WebKit.framework in Frameworks */,
+				F6A5F41A199C559E004EB2E6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6A5F434199C559E004EB2E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A5F43A199C559E004EB2E6 /* Cocoa.framework in Frameworks */,
+				F6A5F439199C559E004EB2E6 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6A5F40D199C559E004EB2E6 = {
+			isa = PBXGroup;
+			children = (
+				F6A5F41F199C559E004EB2E6 /* Sublime Panel */,
+				F6A5F43D199C559E004EB2E6 /* Sublime PanelTests */,
+				F6A5F418199C559E004EB2E6 /* Frameworks */,
+				F6A5F417199C559E004EB2E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6A5F417199C559E004EB2E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F416199C559E004EB2E6 /* Sublime Panel.app */,
+				F6A5F437199C559E004EB2E6 /* Sublime PanelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6A5F418199C559E004EB2E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F44D199C55EB004EB2E6 /* WebKit.framework */,
+				F6A5F419199C559E004EB2E6 /* Cocoa.framework */,
+				F6A5F438199C559E004EB2E6 /* XCTest.framework */,
+				F6A5F41B199C559E004EB2E6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6A5F41B199C559E004EB2E6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F41C199C559E004EB2E6 /* AppKit.framework */,
+				F6A5F41D199C559E004EB2E6 /* CoreData.framework */,
+				F6A5F41E199C559E004EB2E6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F6A5F41F199C559E004EB2E6 /* Sublime Panel */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F453199C56C6004EB2E6 /* WebViewWindow */,
+				F6A5F44F199C5670004EB2E6 /* JsApi */,
+				F6A5F45F199C5786004EB2E6 /* web-app */,
+				F6A5F42B199C559E004EB2E6 /* SublimePanelAppDelegate.h */,
+				F6A5F42C199C559E004EB2E6 /* SublimePanelAppDelegate.m */,
+				F6A5F45C199C574F004EB2E6 /* AppController.h */,
+				F6A5F45D199C574F004EB2E6 /* AppController.m */,
+				F6A5F42E199C559E004EB2E6 /* MainMenu.xib */,
+				F6A5F431199C559E004EB2E6 /* Images.xcassets */,
+				F6A5F420199C559E004EB2E6 /* Supporting Files */,
+			);
+			path = "Sublime Panel";
+			sourceTree = "<group>";
+		};
+		F6A5F420199C559E004EB2E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F421199C559E004EB2E6 /* Sublime Panel-Info.plist */,
+				F6A5F422199C559E004EB2E6 /* InfoPlist.strings */,
+				F6A5F425199C559E004EB2E6 /* main.m */,
+				F6A5F427199C559E004EB2E6 /* Sublime Panel-Prefix.pch */,
+				F6A5F428199C559E004EB2E6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6A5F43D199C559E004EB2E6 /* Sublime PanelTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F443199C559E004EB2E6 /* Sublime_PanelTests.m */,
+				F6A5F43E199C559E004EB2E6 /* Supporting Files */,
+			);
+			path = "Sublime PanelTests";
+			sourceTree = "<group>";
+		};
+		F6A5F43E199C559E004EB2E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F43F199C559E004EB2E6 /* Sublime PanelTests-Info.plist */,
+				F6A5F440199C559E004EB2E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6A5F44F199C5670004EB2E6 /* JsApi */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F450199C5690004EB2E6 /* JsApi.h */,
+				F6A5F451199C5690004EB2E6 /* JsApi.m */,
+			);
+			name = JsApi;
+			sourceTree = "<group>";
+		};
+		F6A5F453199C56C6004EB2E6 /* WebViewWindow */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5F454199C56EE004EB2E6 /* WebViewWindowController.h */,
+				F6A5F455199C56EE004EB2E6 /* WebViewWindowController.m */,
+				F6A5F456199C56EE004EB2E6 /* WebViewWindowController.xib */,
+				F6A5F457199C56EE004EB2E6 /* WebViewWindow.h */,
+				F6A5F458199C56EE004EB2E6 /* WebViewWindow.m */,
+			);
+			name = WebViewWindow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6A5F415199C559E004EB2E6 /* Sublime Panel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6A5F447199C559E004EB2E6 /* Build configuration list for PBXNativeTarget "Sublime Panel" */;
+			buildPhases = (
+				F6A5F412199C559E004EB2E6 /* Sources */,
+				F6A5F413199C559E004EB2E6 /* Frameworks */,
+				F6A5F414199C559E004EB2E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sublime Panel";
+			productName = "Sublime Panel";
+			productReference = F6A5F416199C559E004EB2E6 /* Sublime Panel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6A5F436199C559E004EB2E6 /* Sublime PanelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6A5F44A199C559E004EB2E6 /* Build configuration list for PBXNativeTarget "Sublime PanelTests" */;
+			buildPhases = (
+				F6A5F433199C559E004EB2E6 /* Sources */,
+				F6A5F434199C559E004EB2E6 /* Frameworks */,
+				F6A5F435199C559E004EB2E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6A5F43C199C559E004EB2E6 /* PBXTargetDependency */,
+			);
+			name = "Sublime PanelTests";
+			productName = "Sublime PanelTests";
+			productReference = F6A5F437199C559E004EB2E6 /* Sublime PanelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6A5F40E199C559E004EB2E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SublimePanel;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Toily;
+				TargetAttributes = {
+					F6A5F436199C559E004EB2E6 = {
+						TestTargetID = F6A5F415199C559E004EB2E6;
+					};
+				};
+			};
+			buildConfigurationList = F6A5F411199C559E004EB2E6 /* Build configuration list for PBXProject "Sublime Panel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6A5F40D199C559E004EB2E6;
+			productRefGroup = F6A5F417199C559E004EB2E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6A5F415199C559E004EB2E6 /* Sublime Panel */,
+				F6A5F436199C559E004EB2E6 /* Sublime PanelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6A5F414199C559E004EB2E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A5F424199C559E004EB2E6 /* InfoPlist.strings in Resources */,
+				F6A5F432199C559E004EB2E6 /* Images.xcassets in Resources */,
+				F6A5F42A199C559E004EB2E6 /* Credits.rtf in Resources */,
+				F6A5F460199C5786004EB2E6 /* web-app in Resources */,
+				F6A5F45A199C56EE004EB2E6 /* WebViewWindowController.xib in Resources */,
+				F6A5F430199C559E004EB2E6 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6A5F435199C559E004EB2E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A5F442199C559E004EB2E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6A5F412199C559E004EB2E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A5F452199C5690004EB2E6 /* JsApi.m in Sources */,
+				F6A5F45E199C574F004EB2E6 /* AppController.m in Sources */,
+				F6A5F459199C56EE004EB2E6 /* WebViewWindowController.m in Sources */,
+				F6A5F426199C559E004EB2E6 /* main.m in Sources */,
+				F6A5F45B199C56EE004EB2E6 /* WebViewWindow.m in Sources */,
+				F6A5F42D199C559E004EB2E6 /* SublimePanelAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6A5F433199C559E004EB2E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A5F444199C559E004EB2E6 /* Sublime_PanelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6A5F43C199C559E004EB2E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6A5F415199C559E004EB2E6 /* Sublime Panel */;
+			targetProxy = F6A5F43B199C559E004EB2E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6A5F422199C559E004EB2E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A5F423199C559E004EB2E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6A5F428199C559E004EB2E6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A5F429199C559E004EB2E6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		F6A5F42E199C559E004EB2E6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A5F42F199C559E004EB2E6 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		F6A5F440199C559E004EB2E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A5F441199C559E004EB2E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6A5F445199C559E004EB2E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F6A5F446199C559E004EB2E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F6A5F448199C559E004EB2E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
+				INFOPLIST_FILE = "Sublime Panel/Sublime Panel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6A5F449199C559E004EB2E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
+				INFOPLIST_FILE = "Sublime Panel/Sublime Panel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F6A5F44B199C559E004EB2E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sublime Panel.app/Contents/MacOS/Sublime Panel";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sublime PanelTests/Sublime PanelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F6A5F44C199C559E004EB2E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sublime Panel.app/Contents/MacOS/Sublime Panel";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
+				INFOPLIST_FILE = "Sublime PanelTests/Sublime PanelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6A5F411199C559E004EB2E6 /* Build configuration list for PBXProject "Sublime Panel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6A5F445199C559E004EB2E6 /* Debug */,
+				F6A5F446199C559E004EB2E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6A5F447199C559E004EB2E6 /* Build configuration list for PBXNativeTarget "Sublime Panel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6A5F448199C559E004EB2E6 /* Debug */,
+				F6A5F449199C559E004EB2E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6A5F44A199C559E004EB2E6 /* Build configuration list for PBXNativeTarget "Sublime PanelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6A5F44B199C559E004EB2E6 /* Debug */,
+				F6A5F44C199C559E004EB2E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6A5F40E199C559E004EB2E6 /* Project object */;
+}

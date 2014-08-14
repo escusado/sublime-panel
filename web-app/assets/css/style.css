@@ -1,0 +1,565 @@
+/*************************************************************** Reset & Utils*/
+
+*{
+    cursor : default;
+}
+
+button{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    left: 0;
+
+    /*background-color: rgba(0,0,0,.3);*/ /*debug*/
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid rgba(0, 0, 0, 0);
+
+    border-radius: 10px;
+    background-clip: padding-box;
+    background-color: rgba(0,0,0,.3);
+
+    box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+.clear-fix{
+    clear:both;
+}
+
+
+
+/********************************************************************* Header */
+.header-wrapper{
+    height: 50px;
+
+    background-color: #F8FAFB;
+
+    box-shadow: inset 0 -1px rgba(0,0,0,.2);
+}
+
+.logo-container{
+    min-width: 70px;
+    padding: 15px 0 0 15px;
+}
+
+.logo{
+    display: block;
+}
+
+
+
+
+
+
+/*********************************************************************** Main */
+
+/*.content-wrapper{
+    background-color: #333;
+}*/
+
+.left-sidebar-wrapper{
+    min-width: 160px;
+
+    box-shadow: 1px 0 0 rgba(0,0,0,.17);
+}
+
+/*.body-wrapper{
+    background-color: green;
+}*/
+
+
+
+
+
+
+/************************************************************* Stages Sidebar */
+
+/*.stages-sidebar{
+    background-color: blue;
+}*/
+
+
+/******************************************************************** Filters */
+.filter-controls{
+    height: 50px;
+
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.3);
+}
+
+.stages-filter-button{
+    position: relative;
+
+    padding: 10px;
+}
+
+.stages-filter-button a{
+    display: block;
+
+    padding: 6px 15px 8px 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #1480CC;
+
+    background-color: #FFFFFF;
+    border-radius: 3px;
+
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1),inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 -1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+    /*box-shadow: 0 0 0 1px rgba(0,0,0,.3);*/
+
+    transition: background-color .1s linear;
+}
+
+.stages-filter-button .latch{
+    position: absolute;
+
+    width:0;
+    height:0;
+    top: 21px;
+    right: 31px;
+
+    border-color: transparent transparent transparent #1480CC;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.stages-filter-button:hover a{
+    color: #19A2FF;
+}
+
+.stages-filter-button:hover .latch{
+    border-color: transparent transparent transparent #19A2FF;
+}
+
+.stages-filter-button.active a{
+    padding: 7px 15px 7px 25px;
+
+    background-color: #F0F6FA;
+
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1) ,inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+
+    /*box-shadow: inset 0 2px 4px -1px rgba(0,0,0,.3), 0 0 0 1px rgba(0,0,0,.3);*/
+}
+
+.stages-filter-button.active .latch{
+    top: 24px;
+    right: 33px;
+
+    border-color: #1480CC transparent transparent transparent;
+}
+
+/*************************************************************** Filter Panel */
+
+.stages-filter-panel{
+    position: absolute;
+
+    height: 0;
+    opacity: 0;
+
+    width: 190px;
+    top: 60px;
+    left: 165px;
+    padding: 5px 0 5px 0;
+
+    background-color: #FFFFFF;
+    border-radius: 5px;
+
+    box-shadow:  0 0 0 1px #D6D6D6, 0 6px 12px rgba(0,0,0,0.175);
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    pointer-events: none;
+
+    transition: opacity .05s linear, height .07s linear;
+}
+
+
+.stages-filter-panel.active{
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+.stages-filter-panel:hover{
+    overflow-y: auto;
+}
+
+.stages-filter-panel .tags-container{
+    width: 100%;
+}
+.stages-filter-panel:hover .tags-container{
+    width: 190px;
+}
+
+.tags-container .separator{
+    position: relative;
+    height: 1px;
+    margin: 10px 0;
+
+    background-color: rgba(0,0,0,.1);
+}
+
+.tags-container .separator span{
+    position: absolute;
+
+    padding: 0 5px;
+
+    top : -6px;
+    left: 10px;
+
+    font-size: 11px;
+    color: rgba(0,0,0,.4);
+
+    background-color: #FFF;
+}
+
+.tag-filter.view-all{
+    color: rgba(0,0,0,.4);
+}
+
+.tag-filter{
+    display: block;
+
+    padding: 4px 15px;
+
+    font-size: 13px;
+    color: #333333;
+}
+
+.tag-filter:hover{
+    background-color: #F0F6FA;
+}
+
+.tag-filter .number{
+    margin-left: 5px;
+
+    font-size: 11px;
+
+    color : rgba(0,0,0,.4);
+}
+
+.tag-filter .check{
+    float: right;
+    width: 6px;
+    height: 6px;
+    margin-top: 6px;
+    margin-right: 4px;
+    border-radius: 6px;
+
+    background-color: rgba(0,0,0,.05);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.tag-filter.active .check{
+    width: 15px;
+    height: 12px;
+    margin-top: 2px;
+    margin-right: 0;
+
+    background-color: transparent;
+    background-image: url(../img/black-check.png);
+}
+
+/***************************************************************** Thumb List */
+.thumb-list{
+    overflow-y:scroll;
+}
+
+.stage-thumb{
+    display: block;
+
+    margin: 10px;
+    width: 130px;
+    height: 98px;
+
+    background-color: white;
+    background-image: url(../img/thumb-spinner-2.gif);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 1px;
+
+    box-shadow: 0 0 0 1px rgba(0,0,0,.5);
+
+/*    -webkit-transition: box-shadow .2s ease;*/
+
+    cursor : default;
+}
+
+.thumb-list .stage-thumb{
+    opacity: .4;
+
+    -webkit-transition: opacity .3s ease, box-shadow .15s linear, height .1s linear, margin .1s linear;
+    -webkit-filter: grayscale(100%);
+}
+
+.thumb-list:hover .stage-thumb{
+    opacity: .8;
+
+    -webkit-filter: grayscale(0%);
+}
+
+.thumb-list:hover .stage-thumb:hover{
+    box-shadow: 0 0 0 1px rgba(0,0,0,.2);
+
+    opacity: 1;
+}
+
+.thumb-list:hover .stage-thumb.active:hover,
+.thumb-list .stage-thumb.active,
+.thumb-list .stage-thumb.active:hover{
+    opacity: 1;
+
+    box-shadow: 0 0 0 1px #B3B3B3, 0 0 0 2px #FFFFFF, 0 0 0 4px #007BD8;
+
+    -webkit-filter: grayscale(0%);
+}
+
+.thumb-list .stage-thumb.active.disable,
+.thumb-list .stage-thumb.disable{
+    height: 0;
+
+    margin: 0 10px;
+
+    box-shadow: none;
+}
+
+
+
+
+
+
+/********************************************************************** Stage */
+
+.main-stage-area .button-container{
+    display: inline-block;
+
+    padding-top: 10px;
+}
+
+.main-stage-area .button{
+    float: left;
+
+    padding: 6px 15px 8px 15px;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #1480CC;
+
+    background-color: #FFFFFF;
+    border-radius: 3px;
+
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1),inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 -1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+
+    transition: background-color .1s linear;
+}
+
+.main-stage-area .button:hover{
+    color: #19A2FF;
+}
+
+.main-stage-area .button:active,
+.main-stage-area .button.active{
+    padding: 7px 15px 7px 15px;
+
+    background-color: #F0F6FA;
+
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1) ,inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+}
+
+.button.file{
+    border-radius: 3px 0 0 3px;
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1), inset 0 -1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+}
+
+.main-stage-area .button.file:active,
+.main-stage-area .button.file.active{
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1) ,inset 0 1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+}
+
+.button.url{
+    border-radius: 0 3px 3px 0;
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1),inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 -1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+}
+
+.main-stage-area{
+    text-align: center;
+}
+
+.upload-controls {
+    height: 50px;
+}
+
+.stage{
+    position: relative;
+
+
+}
+
+.single-shot{
+    width: 800px;
+    height: 600px;
+
+    /*width: 640px;
+    height: 480px;*/
+
+    display: inline-block;
+    margin: auto;
+
+    line-height: 0px;
+
+    overflow: hidden;
+}
+
+.single-shot .layer{
+    position: absolute;
+
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+.single-shot .frame {
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.3);
+}
+
+.loader{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    text-align: center;
+
+    background-color: #FFFFFF;
+
+    -webkit-transition: opacity .3s linear;
+}
+
+.loader progress{
+    margin-top: 36%;
+    -webkit-transition: margin-top .4s cubic-bezier(0.600, -0.280, 0.735, 0.045);
+}
+
+.loader.disable{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader.disable progress{
+    margin-top: 10%;
+    pointer-events: none;
+}
+
+
+.fancy-loader{
+    /*background-color: red;*/
+}
+
+.fancy-loader svg{
+    float: left;
+}
+
+
+
+
+
+
+
+/******************************************************************** Cropper */
+.cropper{
+    padding: 10px;
+
+    text-align: center;
+}
+
+.crop-stage {
+    position: relative;
+    display: inline-block;
+}
+
+.cropper .button{
+
+    padding: 6px 15px 8px 15px;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #1480CC;
+
+    background-color: #FFFFFF;
+    border-radius: 3px;
+
+    box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.1),inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 -1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+
+    transition: background-color .1s linear, color .1s linear;
+}
+
+.cropper .button:hover{
+    color: #19A2FF;
+}
+
+.cropper .button:active,
+.cropper .button.active{
+    padding: 7px 15px 7px 15px;
+
+    background-color: #F0F6FA;
+
+    box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1) ,inset -1px 0 0 0 rgba(0,0,0,0.20),inset 0 1px 0 0 rgba(0,0,0,0.3),inset 1px 0 0 0 rgba(0,0,0,0.20);
+}
+
+.cropper .crop.button{
+    float: right;
+}
+
+.cropper .cancel.button{
+    float: left;
+    background-color: #EEEEEE;
+    color: #AAAAAA;
+}
+
+.cropper .cancel.button:hover{
+    color: #333333;
+}
+
+.cropper .controls{
+    margin-top: 10px;
+}
+
+/*.cropper .cropping-image{
+    width: 70%;
+    height: auto;
+}*/
+
+.cropper .frame{
+    position: absolute;
+
+    width: 100%;
+
+    top: 0;
+    left: 0;
+
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.3);
+}
