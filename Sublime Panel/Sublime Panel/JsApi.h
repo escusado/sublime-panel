@@ -16,6 +16,7 @@
 -(void)showModal:(NSString *)name;
 -(void)closeModal;
 -(void)sendCommand:(NSString *) evData;
+-(void)desktopApiExec:(NSString *) evData;
 
 @end
 

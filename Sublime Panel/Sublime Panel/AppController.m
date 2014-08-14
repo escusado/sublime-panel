@@ -8,6 +8,7 @@
 #import "AppController.h"
 #import "WebViewWindow.h"
 #import "JsApi.h"
+#import "DesktopApi.h"
 
 @implementation AppController{
     NSMutableDictionary *windows;
@@ -21,11 +22,12 @@
     jsApi = [[JsApi alloc] init];
     jsApi.appController = self;
     
+    self.desktopApi = [[DesktopApi alloc] init];
+    
     return self;
 }
 
 -(void)initUi{
-    NSLog(@"asdfasdfasdf");
     self.mainWindow = [self addWindow: @{
                                           @"delgate"     : self,
                                           @"name"        : @"main",
@@ -35,6 +37,7 @@
                                           @"winWidth"    : [NSNumber numberWithInt: 800],
                                           @"jsApi"       : jsApi
                                         }];
+    
 }
 
 -(WebViewWindow *)addWindow: (NSDictionary *)config{
@@ -59,11 +62,21 @@
 
 -(void)dispatchCommandOnAllWebViews:(NSString *) evString{
     NSString *command = [[NSString alloc] initWithFormat:@"LocalApi.dispatchCommand('%@');", evString];
-//    NSLog(@"command: %@", command);
+
     for (id key in windows) {
         WebViewWindow *window = [windows objectForKey:key];
         [[window.webView windowScriptObject] evaluateWebScript:command];
+        NSLog(@"dispatched: %@", command);
     }
 }
+
+-(void)desktopApiExec:(NSString *) evString{
+    NSArray *commandTouple = [[NSArray alloc] init] ;
+    commandTouple = [evString componentsSeparatedByString:@"|"];
+    SEL command = NSSelectorFromString(commandTouple[0]);
+    NSString *result = [self.desktopApi performSelector:command withObject:commandTouple[1]];
+    [self dispatchCommandOnAllWebViews:result];
+};
+
 
 @end

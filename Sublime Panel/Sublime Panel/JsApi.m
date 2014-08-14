@@ -29,4 +29,9 @@
     //    NSLog(@"sendCommand %@", evData);
     [self.appController dispatchCommandOnAllWebViews:evData];
 }
+
+-(void)desktopApiExec:(NSString *) evData{
+    [self.appController desktopApiExec:evData];
+}
+
 @end

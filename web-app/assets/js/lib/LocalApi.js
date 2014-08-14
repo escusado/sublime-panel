@@ -11,8 +11,8 @@ Class('LocalApi').includes(CustomEventSupport)({
         },
 
         dispatchCommand : function dispatchCommand(commandString){
+            console.log('commandFromDesktop: ', commandString);
             var command = JSON.parse(commandString);
-            console.log('dispatchCommand: ', command);
 
             this.dispatch(command.name, {data: command.data});
         },
@@ -25,6 +25,10 @@ Class('LocalApi').includes(CustomEventSupport)({
         closeModal : function closeModal(){
             // console.log('closeModal');
             NativeApi.closeModal();
+        },
+
+        desktopApiExec : function desktopApiExec(command, arguments){
+            NativeApi.desktopApiExec_(command+'|'+arguments);
         }
     }
 });

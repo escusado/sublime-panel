@@ -25,6 +25,7 @@
 		F6A5F45B199C56EE004EB2E6 /* WebViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F458199C56EE004EB2E6 /* WebViewWindow.m */; };
 		F6A5F45E199C574F004EB2E6 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A5F45D199C574F004EB2E6 /* AppController.m */; };
 		F6A5F460199C5786004EB2E6 /* web-app in Resources */ = {isa = PBXBuildFile; fileRef = F6A5F45F199C5786004EB2E6 /* web-app */; };
+		F6C92203199C60B500234B4A /* DesktopApi.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C92202199C60B500234B4A /* DesktopApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		F6A5F45C199C574F004EB2E6 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		F6A5F45D199C574F004EB2E6 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		F6A5F45F199C5786004EB2E6 /* web-app */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "web-app"; path = "../../web-app"; sourceTree = "<group>"; };
+		F6C92201199C60B500234B4A /* DesktopApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesktopApi.h; sourceTree = "<group>"; };
+		F6C92202199C60B500234B4A /* DesktopApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesktopApi.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				F6A5F42C199C559E004EB2E6 /* SublimePanelAppDelegate.m */,
 				F6A5F45C199C574F004EB2E6 /* AppController.h */,
 				F6A5F45D199C574F004EB2E6 /* AppController.m */,
+				F6C92201199C60B500234B4A /* DesktopApi.h */,
+				F6C92202199C60B500234B4A /* DesktopApi.m */,
 				F6A5F42E199C559E004EB2E6 /* MainMenu.xib */,
 				F6A5F431199C559E004EB2E6 /* Images.xcassets */,
 				F6A5F420199C559E004EB2E6 /* Supporting Files */,
@@ -303,6 +308,7 @@
 			files = (
 				F6A5F452199C5690004EB2E6 /* JsApi.m in Sources */,
 				F6A5F45E199C574F004EB2E6 /* AppController.m in Sources */,
+				F6C92203199C60B500234B4A /* DesktopApi.m in Sources */,
 				F6A5F459199C56EE004EB2E6 /* WebViewWindowController.m in Sources */,
 				F6A5F426199C559E004EB2E6 /* main.m in Sources */,
 				F6A5F45B199C56EE004EB2E6 /* WebViewWindow.m in Sources */,
@@ -442,6 +448,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
 				INFOPLIST_FILE = "Sublime Panel/Sublime Panel-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -455,6 +462,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
 				INFOPLIST_FILE = "Sublime Panel/Sublime Panel-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,6 +484,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Sublime PanelTests/Sublime PanelTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -494,6 +503,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sublime Panel/Sublime Panel-Prefix.pch";
 				INFOPLIST_FILE = "Sublime PanelTests/Sublime PanelTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

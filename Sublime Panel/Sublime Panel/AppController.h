@@ -7,16 +7,20 @@
 
 #import <Foundation/Foundation.h>
 #import "WebViewWindow.h"
+#import "DesktopApi.h"
 
 @interface AppController : NSObject
 
 @property(strong)WebViewWindow *mainWindow;
 @property(strong)WebViewWindow *currentWindow;
+@property(strong)DesktopApi *desktopApi;
 
 -(void)initUi;
 
--(void)dispatchCommandOnAllWebViews:(NSString *) evString;
+-(void)dispatchCommandOnAllWebViews: (NSString *) evString;
 -(void)showModal: (NSString *)name;
 -(void)closeModal;
+
+-(void)desktopApiExec:(NSString *) evString;
 
 @end
